@@ -34,7 +34,7 @@ class CompareJsonEncoder(json.JSONEncoder):
         if isinstance(obj, (str, unicode)):
             return re.sub(r"[\W'\\/\\r\\n]", '', obj)
         return json.JSONEncoder.default(self, obj)
-#------------------------------MySQL数据比对-------------------------------------------------------------------
+#------------------------------数据比对相关函数-------------------------------------------------------------------
 def is_valid_date(str):
     '''判断是否是一个有效的日期字符串'''
     try:
@@ -63,7 +63,7 @@ def print_error_log(one, two, instanceclass, oid, one_obj, two_obj, key):
     return final_result
 
 
-#------------------------------ADS数据比对-------------------------------------------------------------------
+#------------------------------DRDS-GP数据比对-------------------------------------------------------------------
 def compare_dict(one, two, instanceclass):
     '''
     return 0 equal
