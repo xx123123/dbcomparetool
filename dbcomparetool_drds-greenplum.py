@@ -395,8 +395,7 @@ def send_mail(flag_sendmail, sys_param):
             
             mail_url = 'http://crm.ipaloma.com/sendmail'
             mail_payload = {
-                            'dstmail':'xu.xin@ipaloma.com, liu.guangtao@ipaloma.com, jin.dongxu@ipaloma.com, backend@ipaloma.com, ma.li@ipaloma.com, zhang.haifeng@ipaloma.com, wang.dawei@ipaloma.com',
-                            #'dstmail':'xu.xin@ipaloma.com',
+                            'dstmail':'xu.xin@email.com,',
                             'subject':status_tmp + str(sys_param) + '数据比较' + str(datetime.datetime.today())[0:19],
                             'content':str(content).replace('\r\n', '<br>') + '<br>邮件发送完成<br>'
                             }
@@ -425,7 +424,7 @@ def send_mail(flag_sendmail, sys_param):
             
             mail_url = 'http://crm.ipaloma.com/sendmail'
             mail_payload = {
-                            'dstmail':'xu.xin@ipaloma.com, liu.guangtao@ipaloma.com, jin.dongxu@ipaloma.com, backend@ipaloma.com, ma.li@ipaloma.com, zhang.haifeng@ipaloma.com, wang.dawei@ipaloma.com',
+                            'dstmail':'xu.xin@email.com,',
                             'subject':status_tmp + str(sys_param) + '数据比较' + str(datetime.datetime.today())[0:19],
                             'content':str(content).replace('\r\n', '<br>') + '<br>邮件发送中<br>'
                             }
